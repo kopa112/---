@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -35,39 +35,39 @@ typedef struct {
 
 char* getTypeName(SimType t) {
     switch (t) {
-    case FLIGHT_SIM: return "Авиасимулятор";
-    case DRIVING_SIM: return "Автосимулятор";
-    case SPACE_SIM: return "Космический";
-    case TRAIN_SIM: return "Железнодорожный";
-    case MILITARY_SIM: return "Военный";
-    default: return "Другой";
+    case FLIGHT_SIM: return "РђРІРёР°СЃРёРјСѓР»СЏС‚РѕСЂ";
+    case DRIVING_SIM: return "РђРІС‚РѕСЃРёРјСѓР»СЏС‚РѕСЂ";
+    case SPACE_SIM: return "РљРѕСЃРјРёС‡РµСЃРєРёР№";
+    case TRAIN_SIM: return "Р–РµР»РµР·РЅРѕРґРѕСЂРѕР¶РЅС‹Р№";
+    case MILITARY_SIM: return "Р’РѕРµРЅРЅС‹Р№";
+    default: return "Р”СЂСѓРіРѕР№";
     }
 }
 
 char* getDiffName(Difficulty d) {
     switch (d) {
-    case BEGINNER: return "Начинающий";
-    case INTERMEDIATE: return "Средний";
-    case ADVANCED: return "Продвинутый";
-    case EXPERT: return "Эксперт";
-    default: return "Неизвестно";
+    case BEGINNER: return "РќР°С‡РёРЅР°СЋС‰РёР№";
+    case INTERMEDIATE: return "РЎСЂРµРґРЅРёР№";
+    case ADVANCED: return "РџСЂРѕРґРІРёРЅСѓС‚С‹Р№";
+    case EXPERT: return "Р­РєСЃРїРµСЂС‚";
+    default: return "РќРµРёР·РІРµСЃС‚РЅРѕ";
     }
 }
 
 SimType getTypeFromString(char* str) {
-    if (strcmp(str, "Авиасимулятор") == 0) return FLIGHT_SIM;
-    if (strcmp(str, "Автосимулятор") == 0) return DRIVING_SIM;
-    if (strcmp(str, "Космический") == 0) return SPACE_SIM;
-    if (strcmp(str, "Железнодорожный") == 0) return TRAIN_SIM;
-    if (strcmp(str, "Военный") == 0) return MILITARY_SIM;
+    if (strcmp(str, "РђРІРёР°СЃРёРјСѓР»СЏС‚РѕСЂ") == 0) return FLIGHT_SIM;
+    if (strcmp(str, "РђРІС‚РѕСЃРёРјСѓР»СЏС‚РѕСЂ") == 0) return DRIVING_SIM;
+    if (strcmp(str, "РљРѕСЃРјРёС‡РµСЃРєРёР№") == 0) return SPACE_SIM;
+    if (strcmp(str, "Р–РµР»РµР·РЅРѕРґРѕСЂРѕР¶РЅС‹Р№") == 0) return TRAIN_SIM;
+    if (strcmp(str, "Р’РѕРµРЅРЅС‹Р№") == 0) return MILITARY_SIM;
     return OTHER_SIM;
 }
 
 Difficulty getDiffFromString(char* str) {
-    if (strcmp(str, "Начинающий") == 0) return BEGINNER;
-    if (strcmp(str, "Средний") == 0) return INTERMEDIATE;
-    if (strcmp(str, "Продвинутый") == 0) return ADVANCED;
-    if (strcmp(str, "Эксперт") == 0) return EXPERT;
+    if (strcmp(str, "РќР°С‡РёРЅР°СЋС‰РёР№") == 0) return BEGINNER;
+    if (strcmp(str, "РЎСЂРµРґРЅРёР№") == 0) return INTERMEDIATE;
+    if (strcmp(str, "РџСЂРѕРґРІРёРЅСѓС‚С‹Р№") == 0) return ADVANCED;
+    if (strcmp(str, "Р­РєСЃРїРµСЂС‚") == 0) return EXPERT;
     return BEGINNER;
 }
 
@@ -86,42 +86,42 @@ int main(void) {
     setlocale(LC_ALL, "RUS");
     puts("*************************************************************************************");
     puts("*                                                                                   *");
-    puts("*     Курсовой проект по дисциплине: ""Основы программирования и алгоритмизации""       *");
-    puts("*           Тема: ""Разработка файловой базы данных'Игры-Симуляторы'""                  *");
-    puts("*                     Выполнил: Копытин М.Е., группа бТИИ-251                       *");
+    puts("*     РљСѓСЂСЃРѕРІРѕР№ РїСЂРѕРµРєС‚ РїРѕ РґРёСЃС†РёРїР»РёРЅРµ: ""РћСЃРЅРѕРІС‹ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ Рё Р°Р»РіРѕСЂРёС‚РјРёР·Р°С†РёРё""       *");
+    puts("*           РўРµРјР°: ""Р Р°Р·СЂР°Р±РѕС‚РєР° С„Р°Р№Р»РѕРІРѕР№ Р±Р°Р·С‹ РґР°РЅРЅС‹С…'РРіСЂС‹-РЎРёРјСѓР»СЏС‚РѕСЂС‹'""                  *");
+    puts("*                     Р’С‹РїРѕР»РЅРёР»: РљРѕРїС‹С‚РёРЅ Рњ.Р•., РіСЂСѓРїРїР° Р±РўРР-251                       *");
     puts("*                                                                                   *");
     puts("*************************************************************************************\n");
-    puts("Программа представляет собой базу данных игр-симуляторов для управления.");
-    puts("Основные функции: отображение списка симуляторов в табличном формате,");
-    puts("загрузка из файла, добавление новых записей с сохранением в файл,");
-    puts("сортировка, поиск по типу, комбинированный поиск по издателю и сложности.");
+    puts("РџСЂРѕРіСЂР°РјРјР° РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ СЃРѕР±РѕР№ Р±Р°Р·Сѓ РґР°РЅРЅС‹С… РёРіСЂ-СЃРёРјСѓР»СЏС‚РѕСЂРѕРІ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ.");
+    puts("РћСЃРЅРѕРІРЅС‹Рµ С„СѓРЅРєС†РёРё: РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЃРїРёСЃРєР° СЃРёРјСѓР»СЏС‚РѕСЂРѕРІ РІ С‚Р°Р±Р»РёС‡РЅРѕРј С„РѕСЂРјР°С‚Рµ,");
+    puts("Р·Р°РіСЂСѓР·РєР° РёР· С„Р°Р№Р»Р°, РґРѕР±Р°РІР»РµРЅРёРµ РЅРѕРІС‹С… Р·Р°РїРёСЃРµР№ СЃ СЃРѕС…СЂР°РЅРµРЅРёРµРј РІ С„Р°Р№Р»,");
+    puts("СЃРѕСЂС‚РёСЂРѕРІРєР°, РїРѕРёСЃРє РїРѕ С‚РёРїСѓ, РєРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕРёСЃРє РїРѕ РёР·РґР°С‚РµР»СЋ Рё СЃР»РѕР¶РЅРѕСЃС‚Рё.");
 
     Simulator sims[MAX_SIMS];
     int size = 0;
 
-    printf("\nЗагрузка данных из файла 'sims.txt'...\n");
+    printf("\nР—Р°РіСЂСѓР·РєР° РґР°РЅРЅС‹С… РёР· С„Р°Р№Р»Р° 'sims.txt'...\n");
     size = loadFromFile("sims.txt", sims, MAX_SIMS);
     if (size > 0) {
-        printf("Загружено %d записей.\n", size);
+        printf("Р—Р°РіСЂСѓР¶РµРЅРѕ %d Р·Р°РїРёСЃРµР№.\n", size);
     }
     else {
-        printf("Файл 'sims.txt' не найден. Начните с пустой базы.\n");
+        printf("Р¤Р°Р№Р» 'sims.txt' РЅРµ РЅР°Р№РґРµРЅ. РќР°С‡РЅРёС‚Рµ СЃ РїСѓСЃС‚РѕР№ Р±Р°Р·С‹.\n");
     }
 
     int choice;
     char fname[64];
 
     while (1) {
-        printf("\n----- БАЗА ДАННЫХ ИГР-СИМУЛЯТОРОВ -----\n");
-        printf("1. Показать все симуляторы\n");
-        printf("2. Загрузить из файла\n");
-        printf("3. Сохранить в файл\n");
-        printf("4. Добавить симулятор в массив\n");
-        printf("5. Сохранить весь массив в файл\n");
-        printf("6. Сортировка (название -> тип -> сложность)\n");
-        printf("7. Поиск по типу симулятора\n");
-        printf("8. Комбинированный поиск (издатель + сложность)\n");
-        printf("0. Выход\nВаш выбор: ");
+        printf("\n----- Р‘РђР—Рђ Р”РђРќРќР«РҐ РР“Р -РЎРРњРЈР›РЇРўРћР РћР’ -----\n");
+        printf("1. РџРѕРєР°Р·Р°С‚СЊ РІСЃРµ СЃРёРјСѓР»СЏС‚РѕСЂС‹\n");
+        printf("2. Р—Р°РіСЂСѓР·РёС‚СЊ РёР· С„Р°Р№Р»Р°\n");
+        printf("3. РЎРѕС…СЂР°РЅРёС‚СЊ РІ С„Р°Р№Р»\n");
+        printf("4. Р”РѕР±Р°РІРёС‚СЊ СЃРёРјСѓР»СЏС‚РѕСЂ РІ РјР°СЃСЃРёРІ\n");
+        printf("5. РЎРѕС…СЂР°РЅРёС‚СЊ РІРµСЃСЊ РјР°СЃСЃРёРІ РІ С„Р°Р№Р»\n");
+        printf("6. РЎРѕСЂС‚РёСЂРѕРІРєР° (РЅР°Р·РІР°РЅРёРµ -> С‚РёРї -> СЃР»РѕР¶РЅРѕСЃС‚СЊ)\n");
+        printf("7. РџРѕРёСЃРє РїРѕ С‚РёРїСѓ СЃРёРјСѓР»СЏС‚РѕСЂР°\n");
+        printf("8. РљРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕРёСЃРє (РёР·РґР°С‚РµР»СЊ + СЃР»РѕР¶РЅРѕСЃС‚СЊ)\n");
+        printf("0. Р’С‹С…РѕРґ\nР’Р°С€ РІС‹Р±РѕСЂ: ");
 
         if (scanf("%d", &choice) != 1) {
             while (getchar() != '\n');
@@ -134,19 +134,19 @@ int main(void) {
             printTable(sims, size);
             break;
         case 2:
-            printf("Имя файла для чтения: ");
+            printf("РРјСЏ С„Р°Р№Р»Р° РґР»СЏ С‡С‚РµРЅРёСЏ: ");
             scanf("%63s", fname);
             size = loadFromFile(fname, sims, MAX_SIMS);
             break;
         case 3:
-            printf("Имя файла для сохранения: ");
+            printf("РРјСЏ С„Р°Р№Р»Р° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ: ");
             scanf("%63s", fname);
             saveToFile(fname, sims, size);
             break;
         case 4: {
             int added = addSimToArray(sims, &size, MAX_SIMS);
             if (added) {
-                printf("\nСимулятор добавлен в массив. Всего записей: %d\n", size);
+                printf("\nРЎРёРјСѓР»СЏС‚РѕСЂ РґРѕР±Р°РІР»РµРЅ РІ РјР°СЃСЃРёРІ. Р’СЃРµРіРѕ Р·Р°РїРёСЃРµР№: %d\n", size);
                 printTable(sims, size);
             }
             break;
@@ -154,14 +154,14 @@ int main(void) {
         case 5: {
             int result = saveArrayToFile(sims, size);
             if (result) {
-                printf("Массив успешно сохранен.\n");
+                printf("РњР°СЃСЃРёРІ СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅ.\n");
             }
             break;
         }
         case 6: {
             Simulator* result = sortByTitleTypeDiff(sims, size);
             if (result) {
-                printf("Отсортировано по названию -> типу -> сложности.\n");
+                printf("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРѕ РїРѕ РЅР°Р·РІР°РЅРёСЋ -> С‚РёРїСѓ -> СЃР»РѕР¶РЅРѕСЃС‚Рё.\n");
                 printTable(result, size);
                 free(result);
             }
@@ -169,14 +169,14 @@ int main(void) {
         }
         case 7: {
             int typeChoice;
-            printf("Выберите тип симулятора для поиска:\n");
-            printf("1. Авиасимулятор\n");
-            printf("2. Автосимулятор\n");
-            printf("3. Космический\n");
-            printf("4. Железнодорожный\n");
-            printf("5. Военный\n");
-            printf("6. Другой\n");
-            printf("Ваш выбор: ");
+            printf("Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї СЃРёРјСѓР»СЏС‚РѕСЂР° РґР»СЏ РїРѕРёСЃРєР°:\n");
+            printf("1. РђРІРёР°СЃРёРјСѓР»СЏС‚РѕСЂ\n");
+            printf("2. РђРІС‚РѕСЃРёРјСѓР»СЏС‚РѕСЂ\n");
+            printf("3. РљРѕСЃРјРёС‡РµСЃРєРёР№\n");
+            printf("4. Р–РµР»РµР·РЅРѕРґРѕСЂРѕР¶РЅС‹Р№\n");
+            printf("5. Р’РѕРµРЅРЅС‹Р№\n");
+            printf("6. Р”СЂСѓРіРѕР№\n");
+            printf("Р’Р°С€ РІС‹Р±РѕСЂ: ");
             scanf("%d", &typeChoice);
 
             SimType searchType;
@@ -190,20 +190,20 @@ int main(void) {
             }
 
             int result_size = searchByType(sims, size, searchType);
-            if (result_size == 0) printf("Ничего не найдено.\n");
+            if (result_size == 0) printf("РќРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ.\n");
             break;
         }
         case 8: {
             char publisher[40];
             int diffChoice;
-            printf("Введите издателя: ");
+            printf("Р’РІРµРґРёС‚Рµ РёР·РґР°С‚РµР»СЏ: ");
             scanf("%39s", publisher);
-            printf("Выберите уровень сложности:\n");
-            printf("1. Начинающий\n");
-            printf("2. Средний\n");
-            printf("3. Продвинутый\n");
-            printf("4. Эксперт\n");
-            printf("Ваш выбор: ");
+            printf("Р’С‹Р±РµСЂРёС‚Рµ СѓСЂРѕРІРµРЅСЊ СЃР»РѕР¶РЅРѕСЃС‚Рё:\n");
+            printf("1. РќР°С‡РёРЅР°СЋС‰РёР№\n");
+            printf("2. РЎСЂРµРґРЅРёР№\n");
+            printf("3. РџСЂРѕРґРІРёРЅСѓС‚С‹Р№\n");
+            printf("4. Р­РєСЃРїРµСЂС‚\n");
+            printf("Р’Р°С€ РІС‹Р±РѕСЂ: ");
             scanf("%d", &diffChoice);
 
             Difficulty searchDiff;
@@ -216,11 +216,11 @@ int main(void) {
             }
 
             int result_size = searchByPublisherAndDiff(sims, size, publisher, searchDiff);
-            if (result_size == 0) printf("Ничего не найдено.\n");
+            if (result_size == 0) printf("РќРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ.\n");
             break;
         }
         default:
-            printf("Неверный пункт меню.\n");
+            printf("РќРµРІРµСЂРЅС‹Р№ РїСѓРЅРєС‚ РјРµРЅСЋ.\n");
         }
     }
     return 0;
@@ -229,11 +229,11 @@ int main(void) {
 int printTable(Simulator* a, int n) {
     int i;
     if (n <= 0) {
-        printf("Список пуст.\n");
+        printf("РЎРїРёСЃРѕРє РїСѓСЃС‚.\n");
         return 0;
     }
     printf("\n---------------------------------------------------------------------------------------------------------------------------------------\n");
-    printf("| № | %-28s  | %-17s | %-16s | Год  | %-16s | %-12s |  Физ. |  Миссии |\n", "Название", "Разработчик", "Издатель", "Тип", "Сложность");
+    printf("| в„– | %-28s  | %-17s | %-16s | Р“РѕРґ  | %-16s | %-12s |  Р¤РёР·. |  РњРёСЃСЃРёРё |\n", "РќР°Р·РІР°РЅРёРµ", "Р Р°Р·СЂР°Р±РѕС‚С‡РёРє", "РР·РґР°С‚РµР»СЊ", "РўРёРї", "РЎР»РѕР¶РЅРѕСЃС‚СЊ");
     printf("---------------------------------------------------------------------------------------------------------------------------------------\n");
     for (i = 0; i < n; i++) {
         printf("| %2d | %-28s | %-17s | %-16s | %4d | %-16s | %-12s | %5.1f | %7d |\n", i + 1, a[i].title, a[i].developer, a[i].publisher, a[i].year, getTypeName(a[i].type), getDiffName(a[i].difficulty), a[i].physics, a[i].missions);
@@ -245,7 +245,7 @@ int printTable(Simulator* a, int n) {
 int loadFromFile(char* fname, Simulator* a, int max) {
     FILE* f = fopen(fname, "r");
     if (!f) {
-        printf("Ошибка: не удалось открыть файл '%s'\n", fname);
+        printf("РћС€РёР±РєР°: РЅРµ СѓРґР°Р»РѕСЃСЊ РѕС‚РєСЂС‹С‚СЊ С„Р°Р№Р» '%s'\n", fname);
         return 0;
     }
 
@@ -274,29 +274,29 @@ int loadFromFile(char* fname, Simulator* a, int max) {
             count++;
         }
         else {
-            printf("Ошибка в строке %d: неверный формат\n", line_num);
+            printf("РћС€РёР±РєР° РІ СЃС‚СЂРѕРєРµ %d: РЅРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚\n", line_num);
         }
     }
 
     if (ferror(f)) {
-        printf("Ошибка чтения файла '%s'\n", fname);
+        printf("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р° '%s'\n", fname);
     }
 
     fclose(f);
 
-    printf("Загружено записей: %d\n", count);
+    printf("Р—Р°РіСЂСѓР¶РµРЅРѕ Р·Р°РїРёСЃРµР№: %d\n", count);
     return count;
 }
 
 int saveToFile(char* fname, Simulator* a, int n) {
     if (n <= 0) {
-        printf("Ошибка: нечего сохранять (массив пуст)\n");
+        printf("РћС€РёР±РєР°: РЅРµС‡РµРіРѕ СЃРѕС…СЂР°РЅСЏС‚СЊ (РјР°СЃСЃРёРІ РїСѓСЃС‚)\n");
         return 0;
     }
 
     FILE* f = fopen(fname, "w");
     if (!f) {
-        printf("Ошибка: не удалось создать файл '%s'\n", fname);
+        printf("РћС€РёР±РєР°: РЅРµ СѓРґР°Р»РѕСЃСЊ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р» '%s'\n", fname);
         return 0;
     }
 
@@ -308,7 +308,7 @@ int saveToFile(char* fname, Simulator* a, int n) {
             a[i].physics, a[i].missions);
 
         if (result < 0) {
-            printf("Ошибка записи записи %d\n", i + 1);
+            printf("РћС€РёР±РєР° Р·Р°РїРёСЃРё Р·Р°РїРёСЃРё %d\n", i + 1);
         }
         else {
             saved++;
@@ -316,108 +316,108 @@ int saveToFile(char* fname, Simulator* a, int n) {
     }
 
     if (fflush(f) != 0) {
-        printf("Ошибка сброса буфера файла\n");
+        printf("РћС€РёР±РєР° СЃР±СЂРѕСЃР° Р±СѓС„РµСЂР° С„Р°Р№Р»Р°\n");
     }
 
     if (fclose(f) != 0) {
-        printf("Ошибка закрытия файла\n");
+        printf("РћС€РёР±РєР° Р·Р°РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°\n");
     }
 
-    printf("Сохранено записей: %d\n", saved);
+    printf("РЎРѕС…СЂР°РЅРµРЅРѕ Р·Р°РїРёСЃРµР№: %d\n", saved);
     return saved;
 }
 
 int addSimToArray(Simulator* a, int* n, int max) {
     if (*n >= max) {
-        printf("Ошибка: массив переполнен (максимум %d записей)\n", max);
+        printf("РћС€РёР±РєР°: РјР°СЃСЃРёРІ РїРµСЂРµРїРѕР»РЅРµРЅ (РјР°РєСЃРёРјСѓРј %d Р·Р°РїРёСЃРµР№)\n", max);
         return 0;
     }
 
     Simulator s;
     int typeChoice, diffChoice;
 
-    printf("Введите данные симулятора (без пробелов, вместо них _):\n");
+    printf("Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ СЃРёРјСѓР»СЏС‚РѕСЂР° (Р±РµР· РїСЂРѕР±РµР»РѕРІ, РІРјРµСЃС‚Рѕ РЅРёС… _):\n");
 
-    printf("Название: ");
+    printf("РќР°Р·РІР°РЅРёРµ: ");
     if (scanf("%39s", s.title) != 1) {
-        printf("Ошибка ввода названия\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° РЅР°Р·РІР°РЅРёСЏ\n");
         while (getchar() != '\n');
         return 0;
     }
 
-    printf("Разработчик: ");
+    printf("Р Р°Р·СЂР°Р±РѕС‚С‡РёРє: ");
     if (scanf("%39s", s.developer) != 1) {
-        printf("Ошибка ввода разработчика\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°\n");
         while (getchar() != '\n');
         return 0;
     }
 
-    printf("Издатель: ");
+    printf("РР·РґР°С‚РµР»СЊ: ");
     if (scanf("%39s", s.publisher) != 1) {
-        printf("Ошибка ввода издателя\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° РёР·РґР°С‚РµР»СЏ\n");
         while (getchar() != '\n');
         return 0;
     }
 
-    printf("Год выпуска: ");
+    printf("Р“РѕРґ РІС‹РїСѓСЃРєР°: ");
     if (scanf("%d", &s.year) != 1) {
-        printf("Ошибка ввода года\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° РіРѕРґР°\n");
         while (getchar() != '\n');
         return 0;
     }
 
     if (s.year < 1980 || s.year > 2030) {
-        printf("Предупреждение: год %d вне диапазона\n", s.year);
+        printf("РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ: РіРѕРґ %d РІРЅРµ РґРёР°РїР°Р·РѕРЅР°\n", s.year);
     }
 
-    printf("Тип симулятора (1-Авиа,2-Авто,3-Косм,4-Ж/д,5-Воен,6-Другой): ");
+    printf("РўРёРї СЃРёРјСѓР»СЏС‚РѕСЂР° (1-РђРІРёР°,2-РђРІС‚Рѕ,3-РљРѕСЃРј,4-Р–/Рґ,5-Р’РѕРµРЅ,6-Р”СЂСѓРіРѕР№): ");
     if (scanf("%d", &typeChoice) != 1) {
-        printf("Ошибка ввода типа\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° С‚РёРїР°\n");
         while (getchar() != '\n');
         return 0;
     }
 
     if (typeChoice < 1 || typeChoice > 6) {
-        printf("Ошибка: некорректный тип\n");
+        printf("РћС€РёР±РєР°: РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ С‚РёРї\n");
         while (getchar() != '\n');
         return 0;
     }
     s.type = (SimType)(typeChoice - 1);
 
-    printf("Уровень сложности (1-Начин,2-Средн,3-Продв,4-Эксперт): ");
+    printf("РЈСЂРѕРІРµРЅСЊ СЃР»РѕР¶РЅРѕСЃС‚Рё (1-РќР°С‡РёРЅ,2-РЎСЂРµРґРЅ,3-РџСЂРѕРґРІ,4-Р­РєСЃРїРµСЂС‚): ");
     if (scanf("%d", &diffChoice) != 1) {
-        printf("Ошибка ввода сложности\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° СЃР»РѕР¶РЅРѕСЃС‚Рё\n");
         while (getchar() != '\n');
         return 0;
     }
 
     if (diffChoice < 1 || diffChoice > 4) {
-        printf("Ошибка: некорректная сложность\n");
+        printf("РћС€РёР±РєР°: РЅРµРєРѕСЂСЂРµРєС‚РЅР°СЏ СЃР»РѕР¶РЅРѕСЃС‚СЊ\n");
         while (getchar() != '\n');
         return 0;
     }
     s.difficulty = (Difficulty)(diffChoice - 1);
 
-    printf("Реалистичность физики (0-10): ");
+    printf("Р РµР°Р»РёСЃС‚РёС‡РЅРѕСЃС‚СЊ С„РёР·РёРєРё (0-10): ");
     if (scanf("%f", &s.physics) != 1) {
-        printf("Ошибка ввода физики\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° С„РёР·РёРєРё\n");
         while (getchar() != '\n');
         return 0;
     }
 
     if (s.physics < 0 || s.physics > 10) {
-        printf("Предупреждение: физика %.1f вне диапазона\n", s.physics);
+        printf("РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ: С„РёР·РёРєР° %.1f РІРЅРµ РґРёР°РїР°Р·РѕРЅР°\n", s.physics);
     }
 
-    printf("Количество миссий: ");
+    printf("РљРѕР»РёС‡РµСЃС‚РІРѕ РјРёСЃСЃРёР№: ");
     if (scanf("%d", &s.missions) != 1) {
-        printf("Ошибка ввода миссий\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° РјРёСЃСЃРёР№\n");
         while (getchar() != '\n');
         return 0;
     }
 
     if (s.missions < 0) {
-        printf("Предупреждение: количество миссий %d отрицательное\n", s.missions);
+        printf("РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ: РєРѕР»РёС‡РµСЃС‚РІРѕ РјРёСЃСЃРёР№ %d РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ\n", s.missions);
     }
 
     a[*n] = s;
@@ -427,14 +427,14 @@ int addSimToArray(Simulator* a, int* n, int max) {
 
 int saveArrayToFile(Simulator* a, int n) {
     if (n <= 0) {
-        printf("Массив пуст. Нечего сохранять.\n");
+        printf("РњР°СЃСЃРёРІ РїСѓСЃС‚. РќРµС‡РµРіРѕ СЃРѕС…СЂР°РЅСЏС‚СЊ.\n");
         return 0;
     }
 
     char fname[64];
-    printf("Введите имя файла: ");
+    printf("Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р°: ");
     if (scanf("%63s", fname) != 1) {
-        printf("Ошибка ввода имени файла\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° РёРјРµРЅРё С„Р°Р№Р»Р°\n");
         while (getchar() != '\n');
         return 0;
     }
@@ -444,13 +444,13 @@ int saveArrayToFile(Simulator* a, int n) {
 
 Simulator* sortByTitleTypeDiff(Simulator* a, int n) {
     if (n <= 0) {
-        printf("Массив пуст\n");
+        printf("РњР°СЃСЃРёРІ РїСѓСЃС‚\n");
         return NULL;
     }
 
     Simulator* result = (Simulator*)malloc(n * sizeof(Simulator));
     if (!result) {
-        printf("Ошибка выделения памяти\n");
+        printf("РћС€РёР±РєР° РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё\n");
         return NULL;
     }
 
@@ -491,13 +491,13 @@ Simulator* sortByTitleTypeDiff(Simulator* a, int n) {
 
 int searchByType(Simulator* a, int n, SimType type) {
     if (n <= 0) {
-        printf("Массив пуст\n");
+        printf("РњР°СЃСЃРёРІ РїСѓСЃС‚\n");
         return 0;
     }
 
     Simulator* result = (Simulator*)malloc(n * sizeof(Simulator));
     if (!result) {
-        printf("Ошибка выделения памяти\n");
+        printf("РћС€РёР±РєР° РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё\n");
         return 0;
     }
 
@@ -508,7 +508,7 @@ int searchByType(Simulator* a, int n, SimType type) {
         }
     }
     if (k) {
-        printf("\n=== РЕЗУЛЬТАТЫ ПОИСКА ПО ТИПУ: %s ===\n", getTypeName(type));
+        printf("\n=== Р Р•Р—РЈР›Р¬РўРђРўР« РџРћРРЎРљРђ РџРћ РўРРџРЈ: %s ===\n", getTypeName(type));
         printTable(result, k);
     }
     free(result);
@@ -517,13 +517,13 @@ int searchByType(Simulator* a, int n, SimType type) {
 
 int searchByPublisherAndDiff(Simulator* a, int n, char* publisher, Difficulty diff) {
     if (n <= 0) {
-        printf("Массив пуст\n");
+        printf("РњР°СЃСЃРёРІ РїСѓСЃС‚\n");
         return 0;
     }
 
     Simulator* result = (Simulator*)malloc(n * sizeof(Simulator));
     if (!result) {
-        printf("Ошибка выделения памяти\n");
+        printf("РћС€РёР±РєР° РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё\n");
         return 0;
     }
 
@@ -534,8 +534,8 @@ int searchByPublisherAndDiff(Simulator* a, int n, char* publisher, Difficulty di
         }
     }
     if (k) {
-        printf("\n=== РЕЗУЛЬТАТЫ КОМБИНИРОВАННОГО ПОИСКА ===\n");
-        printf("Издатель: %s, Сложность: %s\n", publisher, getDiffName(diff));
+        printf("\n=== Р Р•Р—РЈР›Р¬РўРђРўР« РљРћРњР‘РРќРР РћР’РђРќРќРћР“Рћ РџРћРРЎРљРђ ===\n");
+        printf("РР·РґР°С‚РµР»СЊ: %s, РЎР»РѕР¶РЅРѕСЃС‚СЊ: %s\n", publisher, getDiffName(diff));
         printTable(result, k);
     }
     free(result);
