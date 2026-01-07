@@ -1,0 +1,5 @@
+MS_Flight_Simulator_2020;Asobo_Studio;Microsoft;2020;Авиасимулятор;Средний;8,5;30
+Assetto_Corsa;Kunos_Simulazioni;505_Games;2014;Автосимулятор;Продвинутый;9,0;15
+Kerbal_Space_Program;Squad;Private_Division;2015;Космический;Начинающий;7,5;50
+Train_Sim_World_3;Dovetail_Games;Dovetail_Games;2022;Железнодорожный;Средний;8,0;25
+DCS_World;Eagle_Dynamics;Eagle_Dynamics;2008;Военный;Эксперт;9,5;100
