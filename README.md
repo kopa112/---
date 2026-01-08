@@ -29,56 +29,56 @@
 
 <h2>3. Ключевые функции</h2>
 <h3>Основные функции управления</h3>
-<code>main()</code>
+<code>int main()</code>
 
 - Назначение: Главная функция 
 
 - Особенности: Выводит информацию о программе, меню и вызывает другие функции.
 
-<code>printTable(Simulator* a, int n)</code>
+<code>int printTable(Simulator* a, int n)</code>
 - Назначение: Вывод списка симуляторов в табличном формате.
 
 - Формат: Нумерованные строки, выравненные столбцы
 
 - Обработка: Сообщение при пустом массиве
 
-<code>loadFromFile(char* fname, Simulator* a, int max)</code>
+<code>int loadFromFile(char* fname, Simulator* a, int max)</code>
 - Назначение: Загрузка симуляторов из текстового файла.
 
 - Обработка ошибок: Читает данные в формате "название;разработчик;издатель;год;тип;сложность;физика;миссии". Включает обработку ошибок чтения и проверку корректности данных.
 
-<code>saveToFile(char* fname, Simulator* a, int n)</code>
+<code>int saveToFile(char* fname, Simulator* a, int n)</code>
 - Назначение: Сохранение всех симуляторов в текстовый файл.
   
 - Особенности: Записывает данные в том же формате, что и загрузка. Проверяет успешность операции записи и закрытия файла.
 
-<code>addSimToArray(Simulator* a, int* n, int max)</code>
+<code>int addSimToArray(Simulator* a, int* n, int max)</code>
 - Назначение: Добавление новой записи о симуляторе в массив.
 
 - Валидация: Год (1980-2030), физика (0-10), миссии (≥0)
 
 - Ввод: Пошаговый с проверкой каждого поля
 
-<code>saveArrayToFile(Simulator* a, int n)</code>
+<code>int saveArrayToFile(Simulator* a, int n)</code>
 - Назначение: Сохранение всего массива симуляторов в файл.
 
 - Особенности: Запрашивает имя файла, вызывает <code>saveToFile</code>
 
-<code>sortByTitleTypeDiff(Simulator* a, int n)</code>
+<code>Simulator* sortByTitleTypeDiff(Simulator* a, int n)</code>
 - Назначение: Сортировка симуляторов по названию, типу и сложности.
 
 - Порядок: 1. Название → 2. Тип → 3. Сложность
 
 - Алгоритм: Использует алгоритм сортировки вставками, возвращает новый отсортированный массив. 
 
-<code>searchByType(Simulator* a, int n, SimType type)</code>
+<code>int searchByType(Simulator* a, int n, SimType type)</code>
 - Назначение: Поиск всех симуляторов заданного типа.
 
 - Типы: Авиа, авто, космос, ж/д, военные, другие
 
 - Вывод: Возвращает количество найденных записей и выводит их в виде таблицы.
 
-<code>searchByPublisherAndDiff(Simulator* a, int n, char* publisher, Difficulty diff)</code>
+<code>int searchByPublisherAndDiff(Simulator* a, int n, char* publisher, Difficulty diff)</code>
 - Назначение: Комбинированный поиск по издателю и уровню сложности.
 
 - Реализация: Линейный поиск с двумя условиями фильтрации
