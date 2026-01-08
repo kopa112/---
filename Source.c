@@ -80,7 +80,7 @@ Simulator* sortByTitleTypeDiff(Simulator* a, int n);
 int searchByType(Simulator* a, int n, SimType type);
 int searchByPublisherAndDiff(Simulator* a, int n, char* publisher, Difficulty diff);
 
-int main(void) {
+int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     setlocale(LC_ALL, "RUS");
